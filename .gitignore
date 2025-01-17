@@ -1,31 +1,45 @@
-tmp
-node_modules
-/webapp/public
-/bin
-/third_party/*/lib*.a
-/third_party/*/target
-/third_party/phpspy_src
+# Binaries for programs and plugins
+/phlare
+/pyroscope
+/profilecli
+/playground
+# Test binary, built with `go test -c`
+*.test
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+/cmd/phlare/data
+/cmd/pyroscope/data
+pyroscope-sync/
+data/
+data-shared/
+data-compactor/
+data-metastore/
 .DS_Store
-/Icon*
-/out/
-/scripts/packages/
-.eslintcache
-*.pyc
-*.internal
-*.syso
-*.exe
+**/dist
+
+# IDE
 .idea
 .vscode
-vendor/
-benchmark/.env
-benchmark/report
-benchmark/fixtures
-/.env
-# diff output is stored per test
-cypress/snapshots/**/__diff_output__
-cypress/videos
+
+# Frontend
+public/build
 cypress/screenshots
-coverage
-# this file may contain sensitive credentials
-pkg/server/testdata/oauth-config.yml
-dist
+.eslintcache
+node_modules
+/grafana/flamegraph/coverage/
+# Yarn
+**/.yarn/*
+!**/.yarn/patches
+!**/.yarn/releases
+!**/.yarn/plugins
+!**/.yarn/sdks
+!**/.yarn/versions
+.pnp.*
+yarn-error.log
+
+# Contains the docker image id for pyroscope
+/.docker-image-id-pyroscope
+
+/.tmp
+tools/k6/.env
